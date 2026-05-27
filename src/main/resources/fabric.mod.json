@@ -3,9 +3,9 @@
 	"id": "superstaff",
 	"version": "${version}",
 	"name": "superstaff",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "It Adds super Sticks , Stick with powers!!",
 	"authors": [
-		"Me!"
+		"Rainy!"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -20,7 +20,8 @@
 		],
 		"fabric-datagen": [
 			"net.rainy.superstaff.SuperstaffDataGenerator"
-		]
+		],
+		"client": ["net.rainy.superstaff.SuperClient"]
 	},
 	"mixins": [
 		"superstaff.mixins.json"
