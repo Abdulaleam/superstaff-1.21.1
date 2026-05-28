@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {"item": "minecraft:gold_ingot"},
+    "F": {"item": "minecraft:diamond"}},
+  "pattern": [
+    "RRR",
+    "RFR",
+    "RRR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "superstaff:magic_gem"
+  }
+}

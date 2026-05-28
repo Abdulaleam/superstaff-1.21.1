@@ -5,6 +5,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
@@ -19,44 +20,34 @@ public class TierNine extends Item {
     public TierNine(Settings settings) {
         super(settings);
     }
-
+// so yk like the DEATH BEAM , where a ray comes down then EVERYTHING IS GONE
+    // that is what im trying do i will make the whole chunk dissapear
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
         if (!world.isClient()) {
-
             BlockHitResult hit = (BlockHitResult) user.raycast(50.0, 1.0F, false);
             BlockPos center = hit.getBlockPos();
-
-            // 🔊 Beacon sound
-            world.playSound(
-                    null,
-                    center,
-                    SoundEvents.BLOCK_BEACON_ACTIVATE,
-                    SoundCategory.BLOCKS
-            );
-
-            // ✨ Beacon particles
-            for (int i = 0; i < 80; i++) {
-                world.addParticle(
-                        ParticleTypes.END_ROD,
-                        center.getX() + 0.5,
-                        center.getY() + 1,
-                        center.getZ() + 0.5,
-                        (world.random.nextDouble() - 0.5) * 0.2,
-                        world.random.nextDouble() * 0.2,
-                        (world.random.nextDouble() - 0.5) * 0.2
-                );
-            }
+            // XDDDDDDDDD i tried adding particles and a sound , BUT I think its too much for the game
+            // they dont end up working , so i just removed them
             // would 200 blocks be good, PLS DONT CRASH MY PC PLS DONT CRASH MY PC
-            for (int x = -16; x <= 16; x++) {
+            ((ServerWorld) world).spawnParticles(ParticleTypes.END_ROD, user.getX(), user.getY() + 1, user.getZ()
+                    , 20, 0.3, 0.5, 0.3, 0.01);
+            ((ServerWorld) world).spawnParticles(ParticleTypes.SONIC_BOOM, user.getX(), user.getY() + 1, user.getZ()
+                    , 20, 0.3, 0.5, 0.3, 0.01);
+            world.playSound(null, user.getBlockPos(), SoundEvents.BLOCK_PORTAL_TRAVEL,SoundCategory.PLAYERS);
+            ((ServerWorld) world).spawnParticles(ParticleTypes.SMOKE, user.getX(), user.getY() + 1, user.getZ()
+                    , 20, 0.3, 0.5, 0.3, 0.01);
+            ((ServerWorld) world).spawnParticles(ParticleTypes.POOF, user.getX(), user.getY(), user.getZ()
+                    , 15, 0.2, 0.2, 0.2, 0.02);
+            // i can't lie , i copied that from tier ten , since i liked it so much
+            for (int x = -20; x <= 24; x++) {
                 for (int y = -200; y <= 200; y++) {
-                    for (int z = -16; z <= 16; z++) {
+                    for (int z = -24; z <= 20; z++) {
                         BlockPos pos = center.add(x, y, z);
                         world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
                     }}}
             // idk i couldn't find a suitable sound to choose
-            world.playSound(null, center, SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.BLOCKS);
         }
 
 

@@ -1,5 +1,5 @@
 {
-  "item.superstaff.superstick": "Super TEST stick",
+  "item.superstaff.superstick": "Super TEST Stick",
   "itemgroup.superstaff.super_sticks_items": "Super Staffs",
   "item.superstaff.tierone": "§kStaff§r §7Tier§r §7One§r §kStaff§r",
   "item.superstaff.tiertwo": "§kStaff§r §6Tier§r §6Two§r §kStaff§r",
@@ -8,8 +8,10 @@
   "item.superstaff.tierfive": "§kStaff§r §bTier§r §bFive§r §kStaff§r",
   "item.superstaff.tiersix": "§kStaff§r §9Tier§r §9Six§r §kStaff§r",
   "item.superstaff.tierseven": "§kStaff§r §4Tier§r §4Seven§r §kStaff§r",
-  "item.superstaff.tiereight": "§kStaff§r §5Tier§r §5Seven§r §kStaff§r"
-
-
+  "item.superstaff.tiereight": "§kStaff§r §5Tier§r §5Eight§r §kStaff§r",
+  "item.superstaff.tiernine": "§kStaff§r §8Tier§r §8Nine§r §kStaff§r",
+  "item.superstaff.tierten": "§kStaff§r §6Tier§r §6Ten§r §kStaff§r",
+  "item.superstaff.magic_gem": "§kStaff§r §bMagic§r §bGem§r §kStaff§r",
+  "block.superstaff.arcane_chamber": "§4Arcane§r §4Runes§r"
 
 }

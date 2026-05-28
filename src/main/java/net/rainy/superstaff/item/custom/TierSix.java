@@ -36,7 +36,7 @@ public class TierSix extends Item {
 
                     for (int x = -9; x <= 10; x++) {
                         for (int y = -3; y <= 3; y++) {
-                            for (int z = -10; z <= 12; z++) {
+                            for (int z = -11; z <= 12; z++) {
 
                                 BlockPos pos = center.add(x, y, z);
 

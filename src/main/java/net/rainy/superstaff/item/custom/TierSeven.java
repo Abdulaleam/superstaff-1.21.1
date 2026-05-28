@@ -38,11 +38,11 @@ public class TierSeven extends Item {
                         for (int y = -3; y <= 3; y++) {
                             for (int z = -10; z <= 12; z++) {
                                 // perfect random radiuis xD
-
                                 BlockPos pos = center.add(x, y, z);
-
-                                if (!world.getBlockState(pos).isAir()) {world.setBlockState(pos, Blocks.LAVA.getDefaultState());
+                                if (!world.getBlockState(pos).isAir()) {
+                                    world.setBlockState(pos, Blocks.LAVA.getDefaultState());
                                 }}}}
+
                     world.playSound(null, center, SoundEvents.BLOCK_GLASS_BREAK, SoundCategory.PLAYERS);
                     // PERFECTO
 

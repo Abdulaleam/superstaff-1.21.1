@@ -8,6 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.rainy.superstaff.Superstaff;
+import net.rainy.superstaff.block.ModBlocks;
 
 public class ModItemGroups {
 
@@ -25,6 +26,10 @@ public class ModItemGroups {
                         entries.add(ModItems.TIER6);
                         entries.add(ModItems.TIER7);
                         entries.add(ModItems.TIER8);
+                        entries.add(ModItems.TIER9);
+                        entries.add(ModItems.TIER10);
+                        entries.add(ModItems.MAGIC_GEM);
+                        entries.add(ModBlocks.ARCANE_CHAMBER);
 
 
                     })
