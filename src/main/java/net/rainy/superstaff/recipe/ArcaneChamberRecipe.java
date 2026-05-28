@@ -21,7 +21,6 @@ public record ArcaneChamberRecipe(Ingredient inputItem, ItemStack output) implem
         return list;
     }
 
-    // read Recipe JSON files --> new GrowthChamberRecipe
 
     @Override
     public boolean matches(ArcaneChamberRecipeInput input, World world) {

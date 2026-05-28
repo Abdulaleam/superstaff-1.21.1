@@ -6,12 +6,12 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -21,9 +21,13 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import net.rainy.superstaff.item.ModItems;
+import net.rainy.superstaff.recipe.ArcaneChamberRecipe;
+import net.rainy.superstaff.recipe.ArcaneChamberRecipeInput;
+import net.rainy.superstaff.recipe.ModRecipes;
 import net.rainy.superstaff.screen.custom.ArcaneChamberScreenHandler;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class ArcaneChamberBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<BlockPos>, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
@@ -87,8 +91,8 @@ public class ArcaneChamberBlockEntity extends BlockEntity implements ExtendedScr
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.writeNbt(nbt, registryLookup);
         Inventories.writeNbt(nbt, inventory, registryLookup);
-        nbt.putInt("growth_chamber.progress", progress);
-        nbt.putInt("growth_chamber.max_progress", maxProgress);
+        nbt.putInt("arcane_chamber.progress", progress);
+        nbt.putInt("arcane_chamber.max_progress", maxProgress);
     }
 
     @Override
@@ -119,8 +123,9 @@ public class ArcaneChamberBlockEntity extends BlockEntity implements ExtendedScr
     }
 
     private void craftItem() {
-        ItemStack output = new ItemStack(ModItems.TIER2);
+        Optional<RecipeEntry<ArcaneChamberRecipe>> recipe = getCurrentRecipe();
 
+        ItemStack output = recipe.get().value().output();
         this.removeStack(INPUT_SLOT, 1);
         this.setStack(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 this.getStack(OUTPUT_SLOT).getCount() + output.getCount()));
@@ -135,11 +140,18 @@ public class ArcaneChamberBlockEntity extends BlockEntity implements ExtendedScr
     }
 
     private boolean hasRecipe() {
-        Item input = ModItems.TIER1;
-        ItemStack output = new ItemStack(ModItems.TIER2);
+        Optional<RecipeEntry<ArcaneChamberRecipe>> recipe = getCurrentRecipe();
+        if(recipe.isEmpty()) {
+            return false;
+        }
 
-        return this.getStack(INPUT_SLOT).isOf(input) &&
-                canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+        ItemStack output = recipe.get().value().output();
+        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+    }
+
+    private Optional<RecipeEntry<ArcaneChamberRecipe>> getCurrentRecipe() {
+        return this.getWorld().getRecipeManager()
+                .getFirstMatch(ModRecipes.ARCANE_CHAMBER_TYPE, new ArcaneChamberRecipeInput(inventory.get(INPUT_SLOT)), this.getWorld());
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

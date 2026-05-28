@@ -6,6 +6,7 @@ import net.rainy.superstaff.block.ModBlocks;
 import net.rainy.superstaff.entity.ModBlockEntities;
 import net.rainy.superstaff.item.ModItemGroups;
 import net.rainy.superstaff.item.ModItems;
+import net.rainy.superstaff.recipe.ModRecipes;
 import net.rainy.superstaff.screen.ModScreenHandlers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ public class Superstaff implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModScreenHandlers.registerScreenHandlers();
 		ModBlockEntities.registerBlockEntities();
+		ModRecipes.registerRecipes();
 	}
 
 }
