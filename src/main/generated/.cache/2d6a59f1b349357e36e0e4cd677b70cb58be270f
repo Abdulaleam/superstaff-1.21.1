@@ -1,15 +1,15 @@
-// 1.21.1	2026-05-28T12:09:21.692154	superstaff/Model Definitions
+// 1.21.1	2026-05-28T12:44:43.5266009	superstaff/Model Definitions
 4fe809918e42c28ac5f1e1d6254848b1087c9feb assets\superstaff\models\item\tiernine.json
 d483f67228ca19ddc50b12307afb368d72d475d9 assets\superstaff\models\item\tierseven.json
 c6453228ba9c53774d576c06118976c2671ba5a3 assets\superstaff\models\item\tierten.json
-7f139e6c95fd70c83f0972032e8ffa75dff7e113 assets\superstaff\models\block\arcane_chamber.json
 f780e21b120f6650b54e7222638045094742ebbb assets\superstaff\models\item\tiersix.json
 996de50dac7e9d61a714a5a976f313f0e732efba assets\superstaff\models\item\arcane_chamber.json
+7f139e6c95fd70c83f0972032e8ffa75dff7e113 assets\superstaff\models\block\arcane_chamber.json
 2ed909a77e24a79536df4f8d7b42af4d0fb0930c assets\superstaff\models\item\tierthree.json
 b16da54f5dfb5e8858522931bdf10bc1a765ff54 assets\superstaff\models\item\tiereight.json
 b0a62ea11f33bd43ec0992fcd9c38681c9017126 assets\superstaff\blockstates\arcane_chamber.json
 485f969f8ff0131654af30efa69ee3cfd623997d assets\superstaff\models\item\tierfive.json
 2e1a3f17d9c2918c24e83c72ad32d5913d23ffcf assets\superstaff\models\item\tierone.json
 6aebb178a04f50c7eff099cf4be962a72c50de47 assets\superstaff\models\item\tierfour.json
-71b03084c2ac758c326fcc7fa7559e2d6d2daaa6 assets\superstaff\models\item\tiertwo.json
 e1bd2a646ec2f9e6404f6e32fe9911d876533590 assets\superstaff\models\item\magic_gem.json
+71b03084c2ac758c326fcc7fa7559e2d6d2daaa6 assets\superstaff\models\item\tiertwo.json
