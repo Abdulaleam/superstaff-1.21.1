@@ -6,16 +6,19 @@
       "item": "superstaff:magic_gem"
     },
     "R": {
-      "item": "minecraft:stick"
+      "item": "minecraft:obsidian"
+    },
+    "Z": {
+      "item": "minecraft:diamond"
     }
   },
   "pattern": [
-    "F",
-    "R",
-    "R"
+    "ZZZ",
+    "RFR",
+    "RRR"
   ],
   "result": {
     "count": 1,
-    "id": "superstaff:tierone"
+    "id": "superstaff:arcane_chamber"
   }
 }

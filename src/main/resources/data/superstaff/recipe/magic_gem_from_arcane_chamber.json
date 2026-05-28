@@ -1,0 +1,9 @@
+{
+  "type": "superstaff:arcane_chamber",
+  "ingredient": {
+    "item": "minecraft:diamond"
+  },
+  "result": {
+    "id": "superstaff:magic_gem"
+  }
+}

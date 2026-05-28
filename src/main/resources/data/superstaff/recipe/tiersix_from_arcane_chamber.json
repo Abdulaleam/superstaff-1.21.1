@@ -1,0 +1,9 @@
+{
+  "type": "superstaff:arcane_chamber",
+  "ingredient": {
+    "item": "minecraft:water_bucket"
+  },
+  "result": {
+    "id": "superstaff:tiersix"
+  }
+}

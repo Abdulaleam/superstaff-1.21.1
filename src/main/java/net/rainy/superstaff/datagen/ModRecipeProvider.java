@@ -9,6 +9,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.rainy.superstaff.block.ModBlocks;
 import net.rainy.superstaff.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -29,11 +30,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.CRAFTING_TABLE), conditionsFromItem(Items.CRAFTING_TABLE))
         .offerTo(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIER1)
-                .pattern("F")
-                .pattern("R")
-                .pattern("R")
-                .input('R', Items.STICK)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ARCANE_CHAMBER)
+                .pattern("ZZZ")
+                .pattern("RFR")
+                .pattern("RRR")
+                .input('R', Items.OBSIDIAN)
+                .input('Z', Items.DIAMOND)
                 .input('F', ModItems.MAGIC_GEM)
                 .criterion(hasItem(Items.CRAFTING_TABLE), conditionsFromItem(Items.CRAFTING_TABLE))
                 .offerTo(exporter);

@@ -1,0 +1,9 @@
+{
+  "type": "superstaff:arcane_chamber",
+  "ingredient": {
+    "item": "minecraft:glowstone_dust"
+  },
+  "result": {
+    "id": "superstaff:tierthree"
+  }
+}

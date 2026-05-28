@@ -1,0 +1,9 @@
+{
+  "type": "superstaff:arcane_chamber",
+  "ingredient": {
+    "item": "minecraft:snowball"
+  },
+  "result": {
+    "id": "superstaff:tierfive"
+  }
+}

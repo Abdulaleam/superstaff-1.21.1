@@ -12,6 +12,6 @@
   "item.superstaff.tiernine": "§kStaff§r §8Tier§r §8Nine§r §kStaff§r",
   "item.superstaff.tierten": "§kStaff§r §6Tier§r §6Ten§r §kStaff§r",
   "item.superstaff.magic_gem": "§kStaff§r §bMagic§r §bGem§r §kStaff§r",
-  "block.superstaff.arcane_chamber": "§4Arcane§r §4Runes§r"
+  "block.superstaff.arcane_chamber": "§kStaff§r §4Arcane§r §7Runes§r §kStaff§r"
 
 }
