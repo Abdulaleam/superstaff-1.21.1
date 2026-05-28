@@ -2,6 +2,7 @@ package net.rainy.superstaff;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.rainy.superstaff.block.ModBlocks;
 import net.rainy.superstaff.item.ModItemGroups;
 import net.rainy.superstaff.item.ModItems;
 import org.slf4j.Logger;
@@ -18,5 +19,6 @@ public class Superstaff implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
+		ModBlocks.registerModBlocks();
 	}
 }

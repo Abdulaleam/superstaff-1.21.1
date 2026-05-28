@@ -13,10 +13,18 @@ public class ModItemGroups {
 
     public static final ItemGroup SUPER_STICKS_ITEMS = Registry.register(Registries.ITEM_GROUP, Identifier.of(Superstaff.MOD_ID
     ,"super_sticks_items"),
-            FabricItemGroup.builder().icon(()-> new ItemStack(ModItems.SUPERSTICK))
+            FabricItemGroup.builder().icon(()-> new ItemStack(ModItems.TIER2))
                             .displayName(Text.translatable("itemgroup.superstaff.super_sticks_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.SUPERSTICK);
+                        entries.add(ModItems.TIER1);
+                        entries.add(ModItems.TIER2);
+                        entries.add(ModItems.TIER3);
+                        entries.add(ModItems.TIER4);
+                        entries.add(ModItems.TIER5);
+                        entries.add(ModItems.TIER6);
+                        entries.add(ModItems.TIER7);
+                        entries.add(ModItems.TIER8);
 
 
                     })

@@ -1,6 +1,15 @@
 {
   "item.superstaff.superstick": "Super TEST stick",
-  "itemgroup.superstaff.super_sticks_items": "Super Staffs"
+  "itemgroup.superstaff.super_sticks_items": "Super Staffs",
+  "item.superstaff.tierone": "§kStaff§r §7Tier§r §7One§r §kStaff§r",
+  "item.superstaff.tiertwo": "§kStaff§r §6Tier§r §6Two§r §kStaff§r",
+  "item.superstaff.tierthree": "§kStaff§r §dTier§r §dThree§r §kStaff§r",
+  "item.superstaff.tierfour": "§kStaff§r §4Tier§r §4Four§r §kStaff§r",
+  "item.superstaff.tierfive": "§kStaff§r §bTier§r §bFive§r §kStaff§r",
+  "item.superstaff.tiersix": "§kStaff§r §9Tier§r §9Six§r §kStaff§r",
+  "item.superstaff.tierseven": "§kStaff§r §4Tier§r §4Seven§r §kStaff§r",
+  "item.superstaff.tiereight": "§kStaff§r §5Tier§r §5Seven§r §kStaff§r"
+
 
 
 }
