@@ -1,8 +1,7 @@
 # Magic Staffs Mod
 
 *A progression-based magic mod featuring custom staffs, powerful abilities, and a full crafting system built around a custom magic machine.*
-## Guide
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vmC130oQVX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+## Guide https://youtu.be/vmC130oQVX0
 ---
 
 # Progress
