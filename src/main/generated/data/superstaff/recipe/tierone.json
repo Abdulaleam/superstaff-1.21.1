@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "superstaff:magic_gem"
+    },
+    "R": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "F",
+    "R",
+    "R"
+  ],
+  "result": {
+    "count": 1,
+    "id": "superstaff:tierone"
+  }
+}
